@@ -5,11 +5,18 @@ import Header from "./Header";
 import AddPost from "./AddPost";
 import NavBar from "./NavBar";
 import UserBar from "./UserBar";
+import ButtonAddNew from "./ButtonAddNew";
+import ButtonLostPet from "./ButtonLostPet";
+import ButtonFoundPet from "./ButtonFoundPet";
 
 const AddNewPost = () => {
   return (
     <div>
-      <Header />
+      <Header>
+        <ButtonLostPet />
+        <ButtonAddNew />
+        <ButtonFoundPet />
+      </Header>
       <div className="container">
         <NavBar />
         <AddPost />

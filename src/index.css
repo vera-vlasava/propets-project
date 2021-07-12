@@ -27,15 +27,26 @@ ul {
   display: flex;
   min-width: 100%;
   /* min-height: 100%; */
+  min-height: 800px;
 }
 
 .header-white {
-  height: 47px;
+  display: flex;
+  height: 70px;
   padding-left: 151px;
-  padding-top: 23.88px;
+  /* padding-top: 23.88px; */
   background: #ffffff;
   box-shadow: 0px 3px 6px #00000029;
   opacity: 1;
+}
+
+.img-header-wrapper {
+  margin-top: 23.88px;
+}
+
+.btn-header-wrapper {
+  margin-left: 40%;
+  margin-top: 18px;
 }
 
 .nav-wrapper,
@@ -106,6 +117,12 @@ ul {
   color: #ffffff;
   background-color: #06b2bbcc;
   border: 1px solid #1cb1ba;
+}
+
+.btn-red {
+  color: #393939;
+  background-color: #fa5456;
+  border: 1px solid #ff2c2f;
 }
 
 .user-name-green {
