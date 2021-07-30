@@ -1,0 +1,90 @@
+.select {
+	position: relative;
+}
+.select__item {
+	position: relative;
+	width: 95px;
+	user-select: none;
+}
+.select__title {
+	color: #000;
+	background-color: #fff;
+	cursor: pointer;
+	border-radius: 5px;
+}
+.select__value {
+	display: flex;
+	font-size: 12px;
+	padding: 0 5px;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: row-reverse;
+}
+.select__value span {
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+.select__value::before {
+	content: "";
+	display: inline-block;
+	transition: all 0.3s ease 0s;
+	width: 11px;
+	height: 7px;
+	background: url("./../images/dist/select.svg") center / 100% no-repeat;
+}
+.select__options {
+	color: #333;
+	display: none;
+	position: absolute;
+	top: 25px;
+	border-radius: 0 0 4px 4px;
+	min-width: 100%;
+	left: 0;
+	background-color: #fff;
+	border-top: 0;
+	border-top: 0;
+	font-size: 12px;
+	cursor: pointer;
+	padding: 7px 10px;
+	margin: 0;
+	box-shadow: 0 3px 6px #00000029;
+}
+
+.select__option-in {
+	display: flex;	
+	justify-content: space-between;
+	flex-direction: row-reverse;
+	text-align: start;
+	align-items: center;
+	transition: color 0.2s ease-in-out,  opacity 0.3s ease-in-out;
+	user-select: none;
+	&::before {
+		content: "";
+		width: 7px;
+		height: 7px;
+		background-color: #63b5b5;
+		border-radius: 50%;
+		opacity: 0;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			
+			color: #63b5b5;
+			//transition: background .3s ease-in-out;
+		  &::before {
+			opacity: 1;
+		  }
+		}
+	  }
+}
+.select._active {
+	z-index: 5;
+}
+.select._active .select__value::before {
+	transform: rotate(-180deg);
+}
+.select._active.select__options {
+	display: block;
+}

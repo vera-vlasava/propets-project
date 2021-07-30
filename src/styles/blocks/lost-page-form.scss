@@ -1,0 +1,126 @@
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.lost-page {
+  // .lost-page__form
+
+  &__form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(190px, 320px) 1fr;
+    gap: 25px;
+    @include media-breakpoint-down(sm) {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+  }
+  // .page-content__items
+
+  &__items {
+    &:last-child {
+      border-top: 1px solid #bababa;
+      width: 100%;
+      grid-column: 1 / span 2;
+      @include media-breakpoint-down(sm) {
+        grid-column: 1 / span 1;
+        &__item-container {
+          flex: 0 0 50%;
+        }
+      }
+      .lost-page__item {
+        &:first-child {
+          padding: 30px 0 10px 0;
+          width: 100%;
+          input:not(:last-child) {
+            margin-right: 15px;
+            margin-bottom: 15px;
+          }
+          @include media-breakpoint-down(sm) {
+            flex-direction: row;
+            padding: 0;
+            input {
+              width: 100%;
+            }
+          }
+          @media (max-width: 340px) {
+            input {
+              max-width: 140px;
+            }
+          }
+        }
+        &:last-child {
+          justify-content: flex-end;
+          @include media-breakpoint-down(sm) {
+            justify-content: center;
+            .button::before {
+              margin-right: 20px;
+            }
+          }
+        }
+      }
+    }
+    &.items-img {
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+  }
+
+  // .page-content__item
+
+  &__item {
+    display: flex;
+    margin-bottom: 8px;
+    align-items: flex-start;
+    label {
+      flex: 0 0 75px;
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      align-items: flex-end;
+      text-align: end;
+      margin-top: 3px;
+      margin-right: 19px;
+      span {
+        display: block;
+        color: lighten(#06b2bb, 10%);
+        font-size: 10px;
+      }
+    }
+    input {
+      flex: 1 1 100%;
+      @include media-breakpoint-down(sm) {
+        flex: 1 1 58%;
+      }
+      @media (max-width: 335px) {
+        flex: 0 1 57%;
+      }
+    }
+
+    select {
+      @extend input;
+      color: #393939;
+      border-bottom: none;
+      flex: 0 0 120px;
+    }
+    textarea {
+      margin: 0;
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 0;
+      }
+      @media (max-width: 335px) {
+        width: 57%;
+      }
+    }
+  }
+}

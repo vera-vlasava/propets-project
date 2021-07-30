@@ -1,29 +1,85 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { NavLink, useHistory } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <div className="nav-wrapper">
-      <div className="nav-inner-wrapper">
-        <div>
-          <ul className="ul-nav-top">
-            <li><FontAwesomeIcon icon={["fas", "home"]} />Home</li>
-            <li><FontAwesomeIcon icon={["fas", "search"]} />Lost</li>
-            <li><FontAwesomeIcon icon={["fas", "paw"]} />Found</li>
-          </ul>
+    <aside className="home-page__sidebar-left">
+      <nav className="home-page__navigation navigation">
+        <div className="menu-button">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-        <div>
-          <div>Services</div>
-          <ul className="ul-nav-bottom">
-            <li><FontAwesomeIcon icon={["fas", "hotel"]} />Hotels</li>
-            <li><FontAwesomeIcon icon={["fas", "walking"]} />Walking</li>
-            <li><FontAwesomeIcon icon={["fas", "dog"]} />Fostering</li>
-            <li><FontAwesomeIcon icon={["fas", "stethoscope"]} />VetHelp</li>
-          </ul>
+        <ul className="navigation__list">
+          <li className="navigation__li">
+            <NavLink exact={true} to="/home" className="navigation__link icon-home">
+              Home
+            </NavLink>
+          </li>
+          <li className="navigation__li">
+            <NavLink exact={true}
+              to="/lost-pets"
+              data-menu="lost"
+              href="#"
+              className="navigation__link icon-search"
+            >
+              Lost
+            </NavLink>
+          </li>
+          <li className="navigation__li">
+            <NavLink exact={true} to="/found-pets" className="navigation__link icon-paw">
+              Found
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
+      <nav className="home-page__navigation navigation nav-services">
+        <div className="nav-services__title-container">
+          <h4 className="nav-services__title">Services</h4>
         </div>
-      </div>
-    </div>
+        <ul className="navigation__list">
+          <li className="navigation__li">
+            <a
+              data-menu="hotels"
+              href="#"
+              className="navigation__link icon-hotel"
+            >
+              Hotels
+            </a>
+          </li>
+          <li className="navigation__li">
+            <a
+              data-menu="walking"
+              href="#"
+              className="navigation__link icon-walking"
+            >
+              Walking
+            </a>
+          </li>
+          <li className="navigation__li">
+            <a
+              data-menu="fostering"
+              href="#"
+              className="navigation__link icon-dog"
+            >
+              Fostering
+            </a>
+          </li>
+          <li className="navigation__li">
+            <a
+              data-menu="vethelp"
+              href="#"
+              className="navigation__link icon-stethoscope"
+            >
+              VetHelp
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
   );
 };
 

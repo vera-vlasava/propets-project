@@ -1,0 +1,42 @@
+.footer {
+	position: relative;
+	background-color: $darkBlue;
+	&__logo.logo {
+		@include adaptiv-value("width", 200, 100, 1);
+	}
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include adaptiv-value("min-height", 193, 120, 1);
+		@include media-breakpoint-down(sm) {
+			flex-direction: column;
+			justify-content: space-evenly;
+			padding: 10px 0;
+		}
+	}
+
+	// .footer__address
+
+	&__address {
+		width: 188px;
+		font-size: 12px;
+		font-weight: 500;
+		color: $white;
+		text-align: end;
+		@include media-breakpoint-down(sm) {
+			text-align: center;
+		}
+	}
+}
+
+.home-footer {
+	background-color: $white;
+	.footer__address {
+		color: $darkBlue;
+		text-align: end;
+		@include media-breakpoint-down(sm) {
+			text-align: center;
+		}
+	}
+}

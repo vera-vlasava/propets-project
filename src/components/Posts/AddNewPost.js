@@ -1,10 +1,10 @@
 import React from "react";
 // import { useForm } from "react-cool-form";
 // import Field from "./FormComponents/Field";
-import Header from "./Header";
+import Header from "../Header";
 import AddPost from "./AddPost";
-import NavBar from "./NavBar";
-import UserBar from "./UserBar";
+import NavBar from "../NavBar";
+import UserBar from "../UserBar";
 import ButtonAddNew from "./ButtonAddNew";
 import ButtonLostPet from "./ButtonLostPet";
 import ButtonFoundPet from "./ButtonFoundPet";
@@ -15,7 +15,7 @@ const AddNewPost = () => {
       <Header>
         <ButtonLostPet />
         <ButtonAddNew />
-        <ButtonFoundPet />
+        {/* <ButtonFoundPet /> */}
       </Header>
       <div className="container">
         <NavBar />
