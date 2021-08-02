@@ -4,10 +4,17 @@ import { useHistory } from "react-router";
 const Header = (props) => {
   let history = useHistory();
 
-  const clickHandle = (event) => {
+  const clickHandleFound = (event) => {
     event.preventDefault();
     history.push("/add-new-found-pet");
   };
+
+  const clickHandleLost = (event) => {
+    event.preventDefault();
+    history.push("/add-new-lost-pet");
+  };
+
+
   return (
     <header className="header home-header">
       <div className="header-row _container">
@@ -16,12 +23,15 @@ const Header = (props) => {
         </a>
         <div className="header__buttons">
           <button
-            
+            onClick={clickHandleLost}
             className="header__button button red icon-search lost"
           >
             <span>I lost my pet</span>
           </button>
-          <button onClick={clickHandle} className="header__button button blue icon-paw found">
+          <button
+            onClick={clickHandleFound}
+            className="header__button button blue icon-paw found"
+          >
             <span>I found a pet</span>
           </button>
         </div>

@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addNewFound } from "../../store/actions/act_foundRecords";
+import { useHistory } from "react-router";
 import NavBar from "../NavBar";
 import UserBar from "../UserBar";
 
 const AddFoundPet = () => {
+  let history = useHistory();
   const dispatch = useDispatch();
   const [formData, setFormData] = useState({
     lostFound: "",
@@ -33,6 +35,11 @@ const AddFoundPet = () => {
   const submitHandle = (event) => {
     event.preventDefault();
     dispatch(addNewFound(formData));
+  };
+
+  const clickHandle = (event) => {
+    event.preventDefault();
+    history.push("/found-pets")
   };
 
   return (
@@ -194,7 +201,11 @@ const AddFoundPet = () => {
                     </div>
                   </div>
                   <div className="lost-page__item">
-                    <button className="button blue icon-paw" type="submit">
+                    <button
+                      onClick={clickHandle}
+                      className="button blue icon-paw"
+                      type="submit"
+                    >
                       <span className="text">Publish</span>
                     </button>
                   </div>
