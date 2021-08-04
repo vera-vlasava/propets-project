@@ -13,18 +13,19 @@ import AddPost from "../components/Posts/AddPost";
 import PostsRecords from "../components/Posts/PostsRecords";
 import Post from "../components/Posts/Post";
 
+
 import PageSingInUp from "../components/SignInUp/PageSignInUp";
-import HomeInit from "../components/Home/HomeInit";
+
 
 
 const Pages = () => {
   return (
     <Switch>
       <Route exact path="/">
-        <Home />
+        <PostsRecords />
       </Route>
       <Route exact path="/home">
-        <Home />
+      <PostsRecords />
       </Route>
       <Route exact path="/lost-pets">
         <LostRecords />
@@ -47,11 +48,9 @@ const Pages = () => {
       <Route exact path="/users/:id">
         <UserProfile />
       </Route>
-      <Route exact path="/posts">
-        <PostsRecords />
-      </Route>
       <Route path="/posts/:id">
         <Post />
+      </Route>
       <Route path="/sign-in">
         <PageSingInUp />
       </Route>
