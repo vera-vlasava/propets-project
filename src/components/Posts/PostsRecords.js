@@ -11,7 +11,6 @@ const PostsRecords = () => {
     }, []);
 
     const allPostsRecords = useSelector((state) => state.posts.list);
-    console.log(allPostsRecords);
 
     const renderPostsRecords = () => {
         if (!allPostsRecords.length) {

@@ -25,7 +25,7 @@ export const addNewFound = (data) => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          // "x-api-key": localStorage.token,
+          "x-api-key": localStorage.token,
         },
         body: JSON.stringify(data),
       });

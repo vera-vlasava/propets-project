@@ -2,9 +2,12 @@ import React from "react";
 import { useHistory, useLocation } from "react-router";
 import { useSelector } from "react-redux";
 
-const Header = (props) => {
+const Header = () => {
   let history = useHistory();
   let location = useLocation();
+  const path = location.pathname.split("/");
+  console.log(path);
+
 
   const isAuth = useSelector((state) => state.users.isAuth);
 
@@ -25,10 +28,8 @@ const Header = (props) => {
 
   const renderButtons = () => {
     if (
-      (location.pathname == "/lost-pets") |
-      (location.pathname == "/found-pets") |
-      (location.pathname == "/found-pets/:id") |
-      (location.pathname == "/lost-pets/:id")
+      isAuth &&
+      (path[1] == "lost-pets" || path[1] == "found-pets")
     ) {
       return (
         <div className="header__buttons">
@@ -46,14 +47,14 @@ const Header = (props) => {
           </button>
         </div>
       );
-    } else if (!isAuth) {
+    } else if (!isAuth || location.pathname == "/add-new-lost-pet" || location.pathname == "/add-new-found-pet") {
       return null;
     } else {
       return (
         <div className="header__buttons">
           <button
             onClick={clickHandleAddPost}
-            class="header__button button blue icon-plus add"
+            className="header__button button blue icon-plus add"
           >
             <span>Add new</span>
           </button>

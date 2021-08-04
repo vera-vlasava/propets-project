@@ -8,6 +8,7 @@ export const getLostRecords = () => {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
+          "x-api-key": localStorage.token,
         },
       });
       const data = await response.json();
@@ -21,12 +22,13 @@ export const getLostRecords = () => {
 
 export const addNewLost = (data) => {
   return async (dispatch) => {
+    
     try {
       const response = await fetch(`${URL}/lostfounds`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          // "x-api-key": localStorage.token,
+          "x-api-key": localStorage.token,
         },
         body: JSON.stringify(data),
       });

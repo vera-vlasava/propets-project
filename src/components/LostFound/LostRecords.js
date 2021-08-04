@@ -11,7 +11,7 @@ const LostRecords = () => {
   }, []);
 
   const allLostRecords = useSelector((state) => state.lostRecords.list);
-  console.log(allLostRecords);
+
   const renderLostRecords = () => {
     if (!allLostRecords.length) {
       return <h2>Nobody is lost</h2>;

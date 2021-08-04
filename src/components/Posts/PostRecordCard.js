@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const PostCard = ({ post }) => {
-    console.log(post.User)
     return (
         <div>
             <img src={post.User.photo} alt="photo" />
