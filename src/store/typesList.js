@@ -3,3 +3,6 @@ export const FETCH_LOST_RECORDS = "FETCH_LOST_RECORDS";
 
 export const ADD_FOUND_RECORD = "ADD_FOUND_RECORD";
 export const FETCH_FOUND_RECORDS = "FETCH_FOUND_RECORDS";
+
+export const ADD_NEW_USER = "ADD_NEW_USER";
+export const CHANGE_AUTH = "CHANGE_AUTH";

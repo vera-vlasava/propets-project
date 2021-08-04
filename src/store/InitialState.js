@@ -2,7 +2,7 @@ const InitialState = {
   users: {
     list: [],
     getUserById: null,
-    // isAuth: localStorage.token ? true : false,
+    isAuth: localStorage.token ? true : false,
   },
   posts: {
     list: [],
