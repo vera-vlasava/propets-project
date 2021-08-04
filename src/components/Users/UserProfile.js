@@ -1,11 +1,7 @@
 import React from "react";
-import NavBar from "../NavBar";
-import UserBar from "../UserBar";
 
 const UserProfile = () => {
   return (
-    <main className="page home-page">
-      <NavBar />
       <div className="home-page__container my-profile__content">
         <h2 className="home-page__title">
           Your profile. Change, edit and manage your data.
@@ -67,8 +63,7 @@ const UserProfile = () => {
           </form>
         </div>
       </div>
-      <UserBar />
-    </main>
+   
   );
 };
 

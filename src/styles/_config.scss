@@ -244,7 +244,9 @@ body {
   content: fa-content($fa-var-pencil-alt);
 }
 .icon-plus:before {
-  content: "\e90a";
+  @extend %fa-icon;
+  @extend .fas;
+  content: fa-content($fa-var-plus);
 }
 .icon-save:before {
   @extend %fa-icon;
