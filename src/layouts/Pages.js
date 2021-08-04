@@ -8,6 +8,8 @@ import LostPetProfile from "../components/LostFound/LostPetProfile";
 import Home from "../components/Home/Home";
 import UserProfile from "../components/Users/UserProfile";
 import AddPost from "../components/Posts/AddPost";
+import PostsRecords from "../components/Posts/PostsRecords";
+import Post from "../components/Posts/Post";
 
 const Pages = () => {
   return (
@@ -35,6 +37,12 @@ const Pages = () => {
       </Route>
       <Route exact path="/users/:id">
         <UserProfile />
+      </Route>
+      <Route exact path="/posts">
+        <PostsRecords />
+      </Route>
+      <Route path="/posts/:id">
+        <Post />
       </Route>
     </Switch>
   );
