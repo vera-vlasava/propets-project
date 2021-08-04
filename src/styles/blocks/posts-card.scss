@@ -1,0 +1,155 @@
+.posts {
+  @extend .services-cards;
+  display: block;
+  // .posts__cards
+
+  &__cards {
+    padding-bottom: 10px;
+  }
+
+  .pet-avatar {
+    margin-bottom: 10px;
+  }
+
+  // .posts__title
+  &__text {
+    padding: 0 14px;
+    p {
+      display: none;
+    }
+  }
+
+  // .posts__title
+
+  &__title {
+    @extend .services-cards__title;
+    margin-bottom: 15px;
+  }
+
+  // .posts__card-img
+
+  &__card-img {
+    padding: 0 14px;
+    margin-bottom: 20px;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  // .posts__card-details
+
+  &__card-details {
+    padding: 0 14px;
+  }
+
+  // .posts__card-details-like
+
+  &__card-details-like {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 0 14px;
+    text-align: end;
+    cursor: pointer;
+    span {
+      display: inline-block;
+      transition: all 0.2s ease-in-out;
+      &::before {
+        font-size: 16px;
+        margin-right: 5px;
+        transition: all 0.2s ease-in-out;
+      }
+      @media (any-hover: hover) {
+        &:hover {
+          color: inherit;
+          &::before {
+            display: inline-block;
+            font-size: 16px;
+            margin-right: 5px;
+            transform: scale(1.2);
+            color: #07cad4;
+          }
+        }
+      }
+    }
+  }
+}
+.posts {
+  &._show-more {
+    .card-comments {
+      display: block;
+    }
+    .posts__card-details-like {
+      margin-bottom: 15px;
+    }
+  }
+}
+.card-comments {
+  padding: 0 14px;
+  display: none;
+
+  // .card-comments__title
+
+  &__title {
+    @extend .home-page__title;
+  }
+
+  // .card-comments__subtitle
+
+  &__subtitle {
+    font-size: 12px;
+    font-weight: 600;
+    color: #393939;
+    margin-bottom: 5px;
+  }
+
+  // .card-comments__text
+
+  &__text {
+    font-size: 12px;
+    font-weight: 500;
+    color: #393939;
+    margin-bottom: 29px;
+  }
+
+  // .card-comments__forf
+
+  &__form {
+    input {
+      font-size: 12px;
+      display: block;
+      width: 100%;
+      border: 1px solid #1cb1ba;
+      padding: 14px 10px 12px;
+      color: #bababa;
+    }
+    button {
+      font-size: 12px;
+      font-weight: 700;
+      border: none;
+      background-color: transparent;
+      color: #68d0d6;
+      transition: color 0.2s ease-in-out;
+      &::before {
+        font-size: 15px;
+        font-weight: 600;
+        margin-right: 5px;
+        color: #393939;
+      }
+      @media (any-hover: hover) {
+        &:hover {
+          color: #393939;
+        }
+      }
+    }
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    &:last-child {
+      text-align: end;
+    }
+  }
+}
+

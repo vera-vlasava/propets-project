@@ -1,0 +1,46 @@
+.add-post {
+  &__avatar {
+    display: flex;
+    align-items: center;
+
+    img {
+      border: 1px solid $white;
+      max-height: 43px;
+      border-radius: 100%;
+      overflow: hidden;
+      display: block;
+      width: 100%;
+      margin-right: 8px;
+    }
+  }
+
+  &__name {
+    color: lighten($darkBlue, 5%);
+    font-weight: 600;
+    line-height: 18px;
+    text-align: center;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    &:last-child {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 30px;
+    }
+  }
+
+  &__input {
+    border: 1px solid #1cb1ba;
+    padding: 10px;
+  }
+
+  &__textarea {
+    padding: 15px;
+    line-height: 1.5;
+  }
+}
+

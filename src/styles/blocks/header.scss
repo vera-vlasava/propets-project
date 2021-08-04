@@ -1,0 +1,104 @@
+.header {
+	position: fixed;
+	width: 100%;
+	background-color: $darkBlue;
+	box-shadow: 0px 3px 6px $boxShadow;
+	margin-bottom: 9px;
+	z-index: 12;
+	@include media-breakpoint-down(md) {
+		margin-bottom: 30px;
+	}
+	&__buttons {
+		display: flex;
+	}
+}
+.header-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 70px;
+
+}
+
+.home-header {
+	background-color: $white;
+	margin-bottom: 0;
+	@include media-breakpoint-down(md) {
+		margin-bottom: 0;
+	}
+}
+
+.logo {
+	display: inline-flex;
+	align-items: center;
+	overflow: visible;
+	@include adaptiv-value("width", 143, 100, 1);
+	margin-bottom: -10px;
+	img {
+		display: block;
+		width: 100%;
+	}
+	position: relative;
+	overflow: visible;
+	.text-line {
+		stroke-dasharray: 500;
+		stroke-dashoffset: 500;
+		stroke-width: 1;
+	}
+}
+
+.logo.logo-white {
+	& .text-line {
+		width: 100%;
+		animation: dashWite 5s linear forwards, fillingWhite 5s ease-in forwards;
+		stroke: #fff;
+		overflow: visible;		
+		@keyframes dashWite {
+			to {
+				stroke-dashoffset: 0;
+			}
+		}
+
+		@keyframes fillingWhite {
+			0%,
+			90% {
+				fill: rgba(#ffffff, 1);
+				fill-opacity: 0;
+				stroke: #fff;
+			}
+			100% {
+				fill: rgba(#ffffff, 1);
+				fill-opacity: 1;
+				stroke: #06b2bb;
+			}
+		}
+	}
+}
+
+.logo.logo-blue {
+	& .text-line {
+		width: 100%;
+		animation: dashBlue 5s linear forwards, fillingBlue 5s ease-in forwards;
+		stroke: #039ba3;
+		overflow: visible;
+	}
+
+	@keyframes dashBlue {
+		to {
+			stroke-dashoffset: 0;
+		}
+	}
+
+	@keyframes fillingBlue {
+		0%,
+		90% {
+			fill: rgba(#06b2bb, 1);
+			fill-opacity: 0;
+		}
+		100% {
+			fill: rgba(#06b2bb, 1);
+			fill-opacity: 1;
+			stroke: #fff;
+		}
+	}
+}
