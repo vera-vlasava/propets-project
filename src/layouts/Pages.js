@@ -9,8 +9,13 @@ import FoundPetProfile from "../components/LostFound/FoundPetProfile";
 import Home from "../components/Home/Home";
 import UserProfile from "../components/Users/UserProfile";
 import AddPost from "../components/Posts/AddPost";
+
+import PostsRecords from "../components/Posts/PostsRecords";
+import Post from "../components/Posts/Post";
+
 import PageSingInUp from "../components/SignInUp/PageSignInUp";
 import HomeInit from "../components/Home/HomeInit";
+
 
 const Pages = () => {
   return (
@@ -42,6 +47,11 @@ const Pages = () => {
       <Route exact path="/users/:id">
         <UserProfile />
       </Route>
+      <Route exact path="/posts">
+        <PostsRecords />
+      </Route>
+      <Route path="/posts/:id">
+        <Post />
       <Route path="/sign-in">
         <PageSingInUp />
       </Route>
