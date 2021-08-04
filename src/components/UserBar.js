@@ -1,15 +1,16 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useHistory } from "react-router";
 
-const UserBar = () => {
+const UserBar = (user) => {
+  let history = useHistory();
+  const clickHandle = (event) => {
+    event.preventDefault();
+    history.push(`/users/${user.id}`);
+  };
   return (
-    // <div className="user-wrapper">
-    //   <div className="user-inner-wrapper"><FontAwesomeIcon icon={["fas", "sign-out-alt"]} />Logout</div>
-    // </div>
-
     <aside className="home-page__sidebar-right">
       <div className="user-card">
-        <div className="user-card__info">
+        <div onClick={clickHandle} className="user-card__info">
           <div className="user-card__img">
             <img src="../images/dist/users/anna-smith.jpg" alt="" />
           </div>

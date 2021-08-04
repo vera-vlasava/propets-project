@@ -5,6 +5,9 @@ export const LostRecordsReducer = (state = {}, action) => {
     case FETCH_LOST_RECORDS:
       return { ...state, ...action.payload };
 
+    case ADD_LOST_RECORD:
+      return { ...state, list: [...state.list, action.payload] };
+
     default:
       return state;
   }

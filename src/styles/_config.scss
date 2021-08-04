@@ -201,10 +201,14 @@ body {
   content: fa-content($fa-var-chevron-right);
 }
 .icon-chevron-down:before {
-  content: "\e901";
+  @extend %fa-icon;
+  @extend .fas;
+  content: fa-content($fa-var-chevron-down);
 }
 .icon-comments:before {
-  content: "\e902";
+  @extend %fa-icon;
+  @extend .fas;
+  content: fa-content($fa-var-comments);
 }
 .icon-dog:before {
   @extend %fa-icon;
@@ -225,7 +229,9 @@ body {
   content: "\e906";
 }
 .icon-map-marker:before {
-  content: "\e907";
+  @extend %fa-icon;
+  @extend .fas;
+  content: fa-content($fa-var-map-marker);
 }
 .icon-paw:before {
   @extend %fa-icon;
@@ -233,13 +239,17 @@ body {
   content: fa-content($fa-var-paw);
 }
 .icon-pencil-alt:before {
-  content: "\e909";
+  @extend %fa-icon;
+  @extend .fas;
+  content: fa-content($fa-var-pencil-alt);
 }
 .icon-plus:before {
   content: "\e90a";
 }
 .icon-save:before {
-  content: "\e90b";
+  @extend %fa-icon;
+  @extend .fas;
+  content: fa-content($fa-var-save);
 }
 .icon-search:before {
   @extend %fa-icon;
@@ -260,7 +270,9 @@ body {
   content: "\e90f";
 }
 .icon-times:before {
-  content: "\e910";
+  @extend %fa-icon;
+  @extend .fas;
+  content: fa-content($fa-var-times);
 }
 .icon-walking:before {
   @extend %fa-icon;
