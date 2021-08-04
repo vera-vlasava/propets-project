@@ -1,11 +1,8 @@
 import React from "react";
-import NavBar from "../NavBar";
-import UserBar from "../UserBar";
+
 
 const FoundPetProfile = () => {
   return (
-    <main className="page home-page">
-      <NavBar />
       <div className="home-page__container hotels">
         <h2 className="home-page__title">
           Found pet: <span className="pet-type">Uncle Sam</span>
@@ -59,8 +56,6 @@ const FoundPetProfile = () => {
           </article>
         </div>
       </div>
-      <UserBar />
-    </main>
   );
 };
 

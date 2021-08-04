@@ -13,7 +13,7 @@ const SignIn = ({ signin }) => {
     const submitHandle = event => {
         event.preventDefault()
         signin(formData)
-        history.push("/home");
+        history.push("/");
     };
 
 

@@ -2,8 +2,6 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getLostRecords } from "../../store/actions/act_lostRecords";
 import LostRecordCard from "./LostRecordCard";
-import NavBar from "../NavBar";
-import UserBar from "../UserBar";
 
 const LostRecords = () => {
   const dispatch = useDispatch();
@@ -29,8 +27,6 @@ const LostRecords = () => {
   };
 
   return (
-    <main className="page home-page">
-      <NavBar />
       <section className="home-page__content">
         <div className="home-page__container">
           <h2 className="home-page__title">Lost pets</h2>
@@ -43,8 +39,6 @@ const LostRecords = () => {
           </div>
         </div>
       </section>
-      <UserBar />
-    </main>
   );
 };
 
