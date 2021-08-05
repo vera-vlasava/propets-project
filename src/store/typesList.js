@@ -15,3 +15,4 @@ export const CHANGE_ADD_POST = "CHANGE_ADD_POST"
 export const FETCH_POST_BY_ID = "FETCH_POST_BY_ID"
 
 export const ADD_COMMENT = "ADD_COMMENT"
+export const EDIT_POST = "EDIT_POST"

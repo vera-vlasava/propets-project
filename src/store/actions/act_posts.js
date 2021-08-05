@@ -1,4 +1,4 @@
-import { FETCH_POSTS, ADD_POST, FETCH_POST_BY_ID } from "../typesList";
+import { FETCH_POSTS, ADD_POST, FETCH_POST_BY_ID, EDIT_POST } from "../typesList";
 import { URL } from "../utilites";
 
 export const getPosts = () => {
@@ -8,6 +8,7 @@ export const getPosts = () => {
         method: "GET",
         mode: "cors",
         headers: {
+
           "Content-Type": "application/json",
         },
       });
@@ -48,17 +49,19 @@ const fetchPosts = (obj) => {
 };
 
 export const getPostById = (postId) => {
+
   return async (dispatch) => {
     try {
       const response = await fetch(`${URL}/posts/${postId}`, {
         method: "GET",
         mode: "cors",
         headers: {
-          "Content-Type": "application/json",
-        },
+          "Content-Type": "application/json"
+        }
       });
       if (response.status !== 200) {
-        return;
+        return
+
       }
       const data = await response.json();
       console.log("id");
@@ -67,14 +70,18 @@ export const getPostById = (postId) => {
     } catch (err) {
       console.log(err.message);
     }
-  };
-};
+
+  }
+}
+
 const fetchPostById = (post) => {
   return {
     type: FETCH_POST_BY_ID,
     payload: post,
+
   };
 };
+
 
 const addNewPostToState = (post) => {
   return {
@@ -82,3 +89,35 @@ const addNewPostToState = (post) => {
     payload: post,
   };
 };
+
+export const addLikeToPost = (id) => {
+  return async (dispatch, getState) => {
+    const post = getState().posts.list.find((post) => post.id === id);
+    //const post = getState().posts.postById;
+
+    try {
+      const response = await fetch(`${URL}/posts/${post.id}`, {
+        method: "PUT",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+          "x-api-key": localStorage.token
+        },
+        body: JSON.stringify({ like: post.like + 1 })
+
+      });
+      if (response.status !== 200) {
+        return
+      }
+
+      const data = await response.json();
+      await dispatch(changePostInState(data))
+    } catch (err) {
+      console.log(err.message);
+    }
+  }
+}
+const changePostInState = (post) => {
+  return { type: EDIT_POST, payload: post }
+}
+

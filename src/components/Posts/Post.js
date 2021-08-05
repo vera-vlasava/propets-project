@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getPostById } from "../../store/actions/act_posts";
 import AddComment from "./AddComment";
+import AddReactionLike from "./AddReactionLike";
 
 const Post = () => {
     const dispatch = useDispatch();
@@ -13,9 +14,19 @@ const Post = () => {
         dispatch(getPostById(+id))
     }, []);
 
+
     const post = useSelector(state => {
         return state.posts.postById
     })
+
+    const posts = useSelector(state => {
+        return state.posts
+    })
+    useEffect(() => {
+        console.log("useEffect1")
+        console.log(posts);
+        //dispatch(getPostById(+id))
+    }, [posts]);
 
     /* const renderCommentsRecords = () => {
         const comments = post.Comments;
@@ -54,8 +65,11 @@ const Post = () => {
                         <p>{post.text}
                         </p>
                     </div>
-                    <div className="posts__card-details-like">
-                        <span className="icon-thumbs-up">{post.like}</span>
+
+                    <div class="posts__card-details-like">
+                        <AddReactionLike post={post} />
+                        {/*  <span class="icon-thumbs-up">{post.like}</span> */}
+
                     </div>
                     <AddComment activePost={post} />
                 </article>
