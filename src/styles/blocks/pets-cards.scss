@@ -12,8 +12,7 @@
   width: 30%;
   position: relative;
   overflow: hidden;
-  margin-bottom: 20px;
-
+  margin-bottom: 30px;
 
   &__img {
     // visibility: hidden;
@@ -26,11 +25,17 @@
   }
 
   &__info-hover {
-    position: absolute;
-    padding: 16px 45px 16px 16px;
-    opacity: 0;
-    top: -35px;
-    transition: all 0.2s ease-in-out;
+    font-size: 10px;
+    &::before {
+      color: #07cad4;
+      margin-right: 5px;
+    }
+    // padding-left:5px;
+    // position: absolute;
+    // padding: 16px 45px 16px 16px;
+    // opacity: 0;
+    // top: -35px;
+    // transition: all 0.2s ease-in-out;
   }
 
   &__info {
@@ -70,8 +75,6 @@
     font-weight: 700;
     color: #707070;
   }
-
- 
 }
 
 .pet-type {
@@ -107,7 +110,7 @@
     display: inline-flex;
     align-items: center;
     flex-direction: row-reverse;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     text-decoration: none;
     color: #07cad4;
@@ -121,10 +124,10 @@
     @media (any-hover: hover) {
       &:hover {
         color: #226363;
-        transform: translateX(10px);
-        &::before {
-          transform: translateX(10px);
-        }
+        // transform: translateX(10px);
+        // &::before {
+        //   transform: translateX(10px);
+        // }
       }
     }
   }
@@ -135,18 +138,22 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
   width: 100%;
-  padding: 20px 15px;
+  padding: 20px 0;
   @include media-breakpoint-down(sm) {
     grid-template-columns: 1fr;
   }
 
   // .card-more__img
+  img {
+    height: 100%;
+    width: auto;
+  }
 
   &__img {
-    padding-bottom: 80%;
+    padding-bottom: 5%;
     background-repeat: no-repeat;
     background-position: center center;
-    // background-image: url("../images/5d87fd0f82452ab6787e72d1754d8900@2x.png");
+    // background-image: url("../images/found-pet.png");
     background-size: cover;
     border-top-left-radius: 12px;
     @include media-breakpoint-down(sm) {

@@ -47,7 +47,7 @@
 	// border-radius: 12px;
 	overflow:hidden;
 	&:not(:last-child) {
-		margin-bottom: 20px;
+		margin-bottom: 30px;
 	}
 	@include media-breakpoint-down(sm) {
 		grid-template-columns: 1fr;
@@ -56,6 +56,7 @@
 		}
 		.services-cards__img {
 			margin-bottom: 20px;
+			
 			img {
 				object-fit: cover;
 				display: block;
@@ -80,7 +81,7 @@
 	// .services-cards__info
 
 	&__info {
-		padding: 15px;
+		padding: 0 15px 0 15px;
 		@include media-breakpoint-down(sm) {
 			margin-bottom: 15px;
 		}
@@ -174,7 +175,7 @@
 	display: inline-grid;
 	grid-template: auto auto / 43px 100%;
 	column-gap: 10px;
-	padding: 10px;
+	padding: 0 10px 10px 10px;
 	&:not(:last-child) {
 		margin-bottom:0;
 	}

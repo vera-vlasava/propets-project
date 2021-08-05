@@ -6,7 +6,6 @@ import FoundRecords from "../components/LostFound/FoundRecords";
 import LostRecords from "../components/LostFound/LostRecords";
 import LostPetProfile from "../components/LostFound/LostPetProfile";
 import FoundPetProfile from "../components/LostFound/FoundPetProfile";
-import Home from "../components/Home/Home";
 import UserProfile from "../components/Users/UserProfile";
 import AddPost from "../components/Posts/AddPost";
 
@@ -14,8 +13,10 @@ import PostsRecords from "../components/Posts/PostsRecords";
 import Post from "../components/Posts/Post";
 
 import PageSingInUp from "../components/SignInUp/PageSignInUp";
-import HomeInit from "../components/Home/HomeInit";
-
+import Fostering from "../components/Articles/Fostering";
+import Hotels from "../components/Articles/Hotels";
+import VetHelp from "../components/Articles/VetHelp";
+import Walking from "../components/Articles/Walking";
 
 const Pages = () => {
   return (
@@ -55,6 +56,18 @@ const Pages = () => {
       </Route>
       <Route path="/add-new-post">
         <AddPost />
+      </Route>
+      <Route path="/fostering">
+        <Fostering />
+      </Route>
+      <Route path="/hotels">
+        <Hotels />
+      </Route>
+      <Route path="/walking">
+        <Walking />
+      </Route>
+      <Route path="/vet-help">
+        <VetHelp />
       </Route>
     </Switch>
   );

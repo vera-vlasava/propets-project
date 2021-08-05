@@ -50,6 +50,7 @@ const PostRecordCard = ({ post }) => {
             </div>
         </div>
     );
+
 };
 
 export default PostRecordCard;

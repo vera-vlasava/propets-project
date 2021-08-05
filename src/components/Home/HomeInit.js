@@ -10,6 +10,16 @@ const HomeInit = () => {
     history.push("/sign-in");
   };
 
+  const clickHandleLost = (event) => {
+    event.preventDefault();
+    history.push("/lost-pets");
+  }
+
+  const clickHandleFound = (event) => {
+    event.preventDefault();
+    history.push("/found-pets");
+  }
+
   return (
     <main className="page">
       <section className="welcome">
@@ -18,7 +28,7 @@ const HomeInit = () => {
             <h1 className="welcome__title">
               Welcome to your <span>pawfessional</span> community
             </h1>
-            <a href="./pages/home.html" className="welcome__button button-lost">
+            <a href="" onClick={clickHandleLost} className="welcome__button button-lost">
               <div className="welcome__button-container">
                 <p className="content-top">I lost my pet!</p>
                 <p className="content-bottom">Click to find!</p>
@@ -26,7 +36,8 @@ const HomeInit = () => {
               <div className="welcome__logo "></div>
             </a>
             <a
-              href="#"
+              href=""
+              onClick={clickHandleFound}
               className="welcome__button button-pet"
               data-micromodal-open
             >
@@ -47,7 +58,7 @@ const HomeInit = () => {
         </div>
         <div className="welcome__info-link info-link">
           I’m okay, just want to{" "}
-          <a onClick={clickHandleSignIn} href="#">
+          <a onClick={clickHandleSignIn} href="">
             join
           </a>{" "}
           the pawsome community!

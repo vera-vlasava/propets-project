@@ -11,7 +11,8 @@ const LostRecords = () => {
   }, []);
 
   const allLostRecords = useSelector((state) => state.lostRecords.list);
-  console.log(allLostRecords);
+  const isAuth = useSelector((state) => state.users.isAuth);
+
   const renderLostRecords = () => {
     if (!allLostRecords.length) {
       return <h2>Nobody is lost</h2>;
@@ -26,19 +27,25 @@ const LostRecords = () => {
     );
   };
 
+  const showText = () => {
+    if (isAuth) {
+      return null;
+    }
+    return (
+      <div className="home-page__info-link info-link">
+        Would you like to publish a post? <a href="#">join</a> to our community!
+      </div>
+    );
+  };
+
   return (
-      <section className="home-page__content">
-        <div className="home-page__container">
-          <h2 className="home-page__title">Lost pets</h2>
-          <div className="home-page__info-link info-link">
-            Would you like to publish a post? <a href="#">join</a> to our
-            community!
-          </div>
-          <div >
-           {renderLostRecords()}
-          </div>
-        </div>
-      </section>
+    <section className="home-page__content">
+      <div className="home-page__container">
+        <h2 className="home-page__title">Lost pets</h2>
+        <div>{showText()}</div>
+        <div>{renderLostRecords()}</div>
+      </div>
+    </section>
   );
 };
 

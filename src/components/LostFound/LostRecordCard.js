@@ -2,6 +2,7 @@ import React from "react";
 import { useHistory } from "react-router";
 
 const LostRecordCard = ({ record }) => {
+  
   let history = useHistory();
   const clickHandle = (event) => {
     event.preventDefault();

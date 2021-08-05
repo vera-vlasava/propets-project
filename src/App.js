@@ -16,9 +16,10 @@ import { useLocation } from "react-router";
 const App = () => {
   const isAuth = useSelector((state) => state.users.isAuth);
   let location = useLocation();
+  const path = location.pathname.split("/");
 
   const renderHeader = () => {
-    if (isAuth) {
+    if (isAuth || path[1] == "lost-pets" || path[1] == "found-pets") {
       return <Header />;
     } else if (location.pathname == "/sign-in") {
       return null;
@@ -28,7 +29,7 @@ const App = () => {
   };
 
   const renderMain = () => {
-    if (isAuth) {
+    if (isAuth || path[1] == "lost-pets" || path[1] == "found-pets") {
       return (
         <main className="page home-page">
           <NavBar />
@@ -44,14 +45,19 @@ const App = () => {
   };
 
   const renderFooter = () => {
-    if (isAuth | (location.pathname == "/sign-in")) {
+    if (
+      isAuth ||
+      location.pathname == "/sign-in" ||
+      path[1] == "lost-pets" ||
+      path[1] == "found-pets"
+    ) {
       return null;
     }
     return <Footer />;
   };
 
   return (
-    <div>
+    <div className="wrapper">
       <div>{renderHeader()}</div>
       <div>{renderMain()}</div>
       <div>{renderFooter()}</div>
