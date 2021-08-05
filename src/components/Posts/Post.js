@@ -24,7 +24,7 @@ const Post = () => {
             return <h1>No comments</h1>;
         }
         return (
-            <div class="card-comments__subtitle">
+            <div className="card-comments__subtitle">
                 {comments.map((comment) => {
                     return (
                         <CommentCard key={comment.id} comment={comment} />
@@ -35,27 +35,27 @@ const Post = () => {
         );
     }; */
     return post.User ? (
-        <div class="home-page__container home-content">
-            <div class="home-page__row">
-                <article class="posts__cards posts services-cards">
-                    <div class="pet-avatar">
-                        <div class="posts__avatar pet-avatar__img">
+        <div className="home-page__container home-content">
+            <div className="home-page__row">
+                <article className="posts__cards posts services-cards">
+                    <div className="pet-avatar">
+                        <div className="posts__avatar pet-avatar__img">
                             <img src={post.User.photo}
                                 alt="photo"
                             />
                         </div>
-                        <div class="pet-avatar__name">{post.User.fullName}</div>
-                        <div class="pet-avatar__date">{post.createdAt}</div>
+                        <div className="pet-avatar__name">{post.User.fullName}</div>
+                        <div className="pet-avatar__date">{post.createdAt}</div>
                     </div>
-                    <div class="posts__text services-cards__text">
-                        <h3 class="posts__title">
+                    <div className="posts__text services-cards__text">
+                        <h3 className="posts__title">
                             {post.title}
                         </h3>
                         <p>{post.text}
                         </p>
                     </div>
-                    <div class="posts__card-details-like">
-                        <span class="icon-thumbs-up">{post.like}</span>
+                    <div className="posts__card-details-like">
+                        <span className="icon-thumbs-up">{post.like}</span>
                     </div>
                     <AddComment activePost={post} />
                 </article>

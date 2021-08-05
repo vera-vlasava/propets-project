@@ -10,29 +10,29 @@ const PostRecordCard = ({ post }) => {
         history.push(`/posts/${post.id}`);
     };
     return (
-        <div class="home-page__container home-content">
-            <div class="home-page__row">
-                {/* <article class="posts__cards posts services-cards"> */}
-                <article class="posts__cards posts">
-                    <div class="pet-avatar">
-                        <div class="posts__avatar pet-avatar__img">
+        <div className="home-page__container home-content">
+            <div className="home-page__row">
+                {/* <article className="posts__cards posts services-cards"> */}
+                <article className="posts__cards posts">
+                    <div className="pet-avatar">
+                        <div className="posts__avatar pet-avatar__img">
                             <img
                                 src={post.User.photo}
                                 alt="photo"
                             />
                         </div>
-                        <div class="pet-avatar__name">{post.User ? `${post.User.fullName}` : "No Name"}</div>
-                        <div class="pet-avatar__date">{post.createdAt}</div>
+                        <div className="pet-avatar__name">{post.User ? `${post.User.fullName}` : "No Name"}</div>
+                        <div className="pet-avatar__date">{post.createdAt}</div>
                     </div>
-                    <div class="posts_card-post-photo">
+                    <div className="posts_card-post-photo">
                         <img src={post.photo} alt="" />
                     </div>
-                    <div class="posts__text services-cards__text">
-                        <h3 class="posts__title">
+                    <div className="posts__text services-cards__text">
+                        <h3 className="posts__title">
                             {post.title}
                         </h3>
                     </div>
-                    <div class="posts__card-details card-details">
+                    <div className="posts__card-details card-details">
                         <a
                             href="#"
                             onClick={clickHandle}
@@ -43,8 +43,8 @@ const PostRecordCard = ({ post }) => {
                         </a>
                         {/* <Link to={`/posts/${post.id}`}> More ... </Link> */}
                     </div>
-                    <div class="posts__card-details-like">
-                        <span class="icon-thumbs-up">Like {post.like}</span>
+                    <div className="posts__card-details-like">
+                        <span className="icon-thumbs-up">Like {post.like}</span>
                     </div>
                 </article>
             </div>
