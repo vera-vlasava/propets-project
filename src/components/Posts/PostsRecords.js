@@ -29,7 +29,9 @@ const PostsRecords = () => {
         );
     };
     return (
-       
+
+        <main className="page home-page">
+
             <section className="home-page__content">
                 <div className="home-page__container">
                     <div >
@@ -37,7 +39,8 @@ const PostsRecords = () => {
                     </div>
                 </div>
             </section>
-        
+
+        </main>
     );
 };
 

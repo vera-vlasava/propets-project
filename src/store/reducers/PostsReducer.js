@@ -1,4 +1,4 @@
-import { FETCH_POSTS, ADD_POST, CHANGE_ADD_POST, FETCH_POST_BY_ID } from "../typesList";
+import { FETCH_POSTS, ADD_POST, CHANGE_ADD_POST, FETCH_POST_BY_ID, ADD_COMMENT } from "../typesList";
 
 export const PostsReducer = (state = {}, action) => {
   switch (action.type) {
@@ -13,6 +13,9 @@ export const PostsReducer = (state = {}, action) => {
 
     case CHANGE_ADD_POST:
       return { ...state, addPostMode: !state.addPostMode };
+
+    case ADD_COMMENT:
+      return { ...state, comments: { ...state.comments, list: [...state.comments.list, action.payload] } };
 
     default:
       return state;

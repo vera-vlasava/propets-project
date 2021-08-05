@@ -61,7 +61,7 @@ const App = () => {
       <div>{renderHeader()}</div>
       <div>{renderMain()}</div>
       <div>{renderFooter()}</div>
-    </div>
+    </div >
   );
 };
 

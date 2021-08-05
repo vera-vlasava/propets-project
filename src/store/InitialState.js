@@ -6,6 +6,11 @@ const InitialState = {
   posts: {
     list: [],
     getPostByID: null,
+    addPostMode: false,
+    postById: {},
+    comments: {
+      list: []
+    }
   },
 
   articles: {
@@ -22,6 +27,8 @@ const InitialState = {
     list: [],
     getLostRecordById: null,
   },
+
+
 };
 
 export default InitialState;

@@ -9,8 +9,12 @@ $white: #ffffff;
 $boxShadow: #00000029;
 $yellow: #fdd219;
 $lineheight: 1.65; // Document Line Height
-$userfont: Montserrat, sans-serif; // User Font Family
-$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+$userfont: Montserrat,
+sans-serif; // User Font Family
+$systemfont: -apple-system,
+BlinkMacSystemFont,
+Arial,
+sans-serif; // System Font Family
 
 //FONTS
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
@@ -22,28 +26,28 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Fon
 //Адаптивное свойство
 @mixin adaptiv-value($property, $startSize, $minSize, $type) {
   $addSize: $startSize - $minSize;
+
   @if $type==1 {
     //Только если меньше контейнера
     #{$property}: $startSize + px;
+
     @media (max-width: #{$maxWidthContainer + px}) {
-      #{$property}: calc(
-        #{$minSize + px} + #{$addSize} *
-          ((100vw - 320px) / #{$maxWidthContainer - 320})
-      );
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
     }
-  } @else if $type==2 {
+  }
+
+  @else if $type==2 {
     //Только если больше контейнера
     #{$property}: $startSize + px;
+
     @media (min-width: #{$maxWidthContainer + px}) {
-      #{$property}: calc(
-        #{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320})
-      );
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
     }
-  } @else {
+  }
+
+  @else {
     //Всегда
-    #{$property}: calc(
-      #{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320})
-    );
+    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
   }
 }
 
@@ -126,6 +130,7 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out,
     color 0.3s ease-in-out;
+
   &::before {
     margin-right: 20px;
     font-size: 18px;
@@ -153,6 +158,7 @@ body {
     border: 1px solid $red;
     color: inherit;
     text-shadow: 1px 1px 3px rgba(#777777, 0.2);
+
     &:hover {
       color: $white;
     }
@@ -161,6 +167,7 @@ body {
   &.border-blue {
     border: 1px solid darken($darkBlue, 2%);
     color: darken($darkBlue, 2%);
+
     @media (any-hover: hover) {
       &:hover {
         border: 1px solid $yellow;
@@ -182,11 +189,13 @@ body {
 
 .info-link {
   font-size: 16px;
+
   a {
     font-weight: 800;
     color: #63b5b5;
     text-transform: uppercase;
     transition: 1.3s ease-in-out;
+
     @media (any-hover: hover) {
       &:hover {
         text-decoration: none;
@@ -200,84 +209,101 @@ body {
   @extend .fas;
   content: fa-content($fa-var-chevron-right);
 }
+
 .icon-chevron-down:before {
   @extend %fa-icon;
   @extend .fas;
   content: fa-content($fa-var-chevron-down);
 }
+
 .icon-comments:before {
   @extend %fa-icon;
   @extend .fas;
   content: fa-content($fa-var-comments);
 }
+
 .icon-dog:before {
   @extend %fa-icon;
   @extend .fas;
   content: fa-content($fa-var-dog);
 }
+
 .icon-home:before {
   @extend %fa-icon;
   @extend .fas;
   content: fa-content($fa-var-home);
 }
+
 .icon-hotel:before {
   @extend %fa-icon;
   @extend .fas;
   content: fa-content($fa-var-hotel);
 }
+
 .icon-hotel-v:before {
   content: "\e906";
 }
+
 .icon-map-marker:before {
   @extend %fa-icon;
   @extend .fas;
   content: fa-content($fa-var-map-marker);
 }
+
 .icon-paw:before {
   @extend %fa-icon;
   @extend .fas;
   content: fa-content($fa-var-paw);
 }
+
 .icon-pencil-alt:before {
   @extend %fa-icon;
   @extend .fas;
   content: fa-content($fa-var-pencil-alt);
 }
+
 .icon-plus:before {
   @extend %fa-icon;
   @extend .fas;
   content: fa-content($fa-var-plus);
 }
+
 .icon-save:before {
   @extend %fa-icon;
   @extend .fas;
   content: fa-content($fa-var-save);
 }
+
 .icon-search:before {
   @extend %fa-icon;
   @extend .fas;
   content: fa-content($fa-var-search);
 }
+
 .icon-sign-out-alt:before {
   @extend %fa-icon;
   @extend .fas;
   content: fa-content($fa-var-sign-out-alt);
 }
+
 .icon-stethoscope:before {
   @extend %fa-icon;
   @extend .fas;
   content: fa-content($fa-var-stethoscope);
 }
+
 .icon-thumbs-up:before {
   @extend %fa-icon;
   @extend .fas;
   content: fa-content($fa-var-thumbs-up);
 }
+
 .icon-times:before {
   @extend %fa-icon;
   @extend .fas;
   content: fa-content($fa-var-times);
 }
+
 .icon-walking:before {
   @extend %fa-icon;
   @extend .fas;

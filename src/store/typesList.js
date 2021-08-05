@@ -13,3 +13,5 @@ export const FETCH_POSTS = "FETCH_POSTS"
 export const ADD_POST = "ADD_POST"
 export const CHANGE_ADD_POST = "CHANGE_ADD_POST"
 export const FETCH_POST_BY_ID = "FETCH_POST_BY_ID"
+
+export const ADD_COMMENT = "ADD_COMMENT"

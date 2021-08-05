@@ -48,9 +48,9 @@ const Pages = () => {
       <Route exact path="/users/:id">
         <UserProfile />
       </Route>
-      {/* <Route path="/posts/:id">
+      <Route path="/posts/:id">
         <Post />
-      </Route> */}
+      </Route>
       <Route path="/sign-in">
         <PageSingInUp />
       </Route>
