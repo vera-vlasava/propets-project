@@ -69,7 +69,7 @@ const SignUp = ({ addUser }) => {
                 <div className="butttext">
                     <p className="text-footnote">By clicking "Submit", you are agree to us processing your information in accordance with <span className="underlinedText">these terms.</span></p>
                     <div className="ssbutt">
-                        <button className="btn btn-white button-right"> Cancel </button>
+                        <button className="btn btn-white"> Cancel </button>
                         <button type="submit" className="btn btn-green button-right"> Submit </button>
                     </div>
                 </div>

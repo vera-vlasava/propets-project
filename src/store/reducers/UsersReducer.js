@@ -10,7 +10,7 @@ export const UsersReducer = (state = {}, action) => {
     case ADD_NEW_USER:
       return {
         ...state,
-        list: [...state.list, action.payload],
+        getUserById: action.payload
       };
     case CHANGE_AUTH:
       return {
