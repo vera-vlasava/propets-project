@@ -4,7 +4,7 @@ import { URL } from "../utilites";
 export const getPosts = () => {
     return async (dispatch) => {
         try {
-            const response = await fetch("http://propets.telran-edu.de:8080/api/v1/posts", {
+            const response = await fetch(`${URL}/posts`, {
                 method: "GET",
                 mode: "cors",
                 headers: {
@@ -25,3 +25,32 @@ const fetchPosts = (obj) => {
         payload: obj,
     };
 };
+
+export const getPostById = (postId) => {
+    return async dispatch => {
+        try {
+            const response = await fetch(`${URL}/posts/${postId}`, {
+                method: "GET",
+                mode: "cors",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            });
+            if (response.status !== 200) {
+                return
+            }
+            const data = await response.json();
+            console.log("id");
+            console.log(data);
+            await dispatch(fetchPostById(data));
+        } catch (err) {
+            console.log(err.message);
+        }
+    }
+}
+const fetchPostById = (post) => {
+    return {
+        type: FETCH_POST_BY_ID,
+        payload: post,
+    }
+}

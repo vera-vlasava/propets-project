@@ -38,12 +38,13 @@ const Pages = () => {
       <Route exact path="/users/:id">
         <UserProfile />
       </Route>
-      <Route exact path="/posts">
-        <PostsRecords />
-      </Route>
-      <Route path="/posts/:id">
+      <Route exact path="/posts/:id">
         <Post />
       </Route>
+      <Route exact path="/main">
+        <PostsRecords />
+      </Route>
+
     </Switch>
   );
 };

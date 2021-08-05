@@ -7,6 +7,8 @@ const InitialState = {
   posts: {
     list: [],
     getPostByID: null,
+    addPostMode: false,
+    postById: {},
   },
 
   articles: {

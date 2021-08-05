@@ -11,12 +11,15 @@ import FoundPetProfile from "./components/LostFound/FoundPetProfile";
 import UserProfile from "./components/Users/UserProfile";
 import Posts from "./components/Posts/Posts";
 import AddPost from "./components/Posts/AddPost";
+import Posts1 from "./components/Posts/PostsRecords"
+import Post12 from "./components/Posts/Post"
 
 const App = () => {
   return (
     <div>
-      <Header />
-      <Pages />
+      {/*   <Header />
+      <Pages /> */}
+      <Posts1 />
     </div>
   );
 };
