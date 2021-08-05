@@ -1,7 +1,6 @@
 const InitialState = {
   users: {
-    list: [],
-    getUserById: null,
+    getUserById: {},
     isAuth: localStorage.token ? true : false,
   },
   posts: {
@@ -12,7 +11,7 @@ const InitialState = {
   articles: {
     list: [],
     getArticleById: null,
-  },
+  }, 
 
   foundRecords: {
     list: [],

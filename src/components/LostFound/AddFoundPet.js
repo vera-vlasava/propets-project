@@ -27,7 +27,7 @@ const AddFoundPet = () => {
       ...formData,
       [event.target.name]: event.target.value,
     });
-    console.log(event.target.value);
+  
   };
 
   const submitHandle = (event) => {

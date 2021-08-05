@@ -56,40 +56,48 @@ const NavBar = () => {
             </div>
             <ul className="navigation__list">
               <li className="navigation__li">
-                <a
+                <NavLink
+                  exact={true}
+                  to="/hotels"
                   data-menu="hotels"
                   href="#"
                   className="navigation__link icon-hotel"
                 >
                   Hotels
-                </a>
+                </NavLink>
               </li>
               <li className="navigation__li">
-                <a
+                <NavLink
+                  exact={true}
+                  to="/walking"
                   data-menu="walking"
                   href="#"
                   className="navigation__link icon-walking"
                 >
                   Walking
-                </a>
+                </NavLink>
               </li>
               <li className="navigation__li">
-                <a
+                <NavLink
+                  exact={true}
+                  to="/fostering"
                   data-menu="fostering"
                   href="#"
                   className="navigation__link icon-dog"
                 >
                   Fostering
-                </a>
+                </NavLink>
               </li>
               <li className="navigation__li">
-                <a
+                <NavLink
+                  exact={true}
+                  to="/vet-help"
                   data-menu="vethelp"
                   href="#"
                   className="navigation__link icon-stethoscope"
                 >
                   VetHelp
-                </a>
+                </NavLink>
               </li>
             </ul>
           </nav>
@@ -98,57 +106,52 @@ const NavBar = () => {
     }
     return (
       <div>
-      <nav className="home-page__navigation navigation">
-        <div className="menu-button">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <ul className="navigation__list">
-          <li className="navigation__li">
-            {/* <NavLink
+        <nav className="home-page__navigation navigation">
+          <div className="menu-button">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul className="navigation__list">
+            <li className="navigation__li">
+              {/* <NavLink
               exact={true}
               to="/home"
               className="navigation__link icon-home"
             >
               Home
             </NavLink> */}
-          </li>
-          <li className="navigation__li">
-            <NavLink
-              exact={true}
-              to="/lost-pets"
-              data-menu="lost"
-              href="#"
-              className="navigation__link icon-search"
-            >
-              Lost
-            </NavLink>
-          </li>
-          <li className="navigation__li">
-            <NavLink
-              exact={true}
-              to="/found-pets"
-              className="navigation__link icon-paw"
-            >
-              Found
-            </NavLink>
-          </li>
-        </ul>
-      </nav>
- 
-    </div>
-    )
+            </li>
+            <li className="navigation__li">
+              <NavLink
+                exact={true}
+                to="/lost-pets"
+                data-menu="lost"
+                href="#"
+                className="navigation__link icon-search"
+              >
+                Lost
+              </NavLink>
+            </li>
+            <li className="navigation__li">
+              <NavLink
+                exact={true}
+                to="/found-pets"
+                className="navigation__link icon-paw"
+              >
+                Found
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    );
   };
 
-  return (
-    <aside className="home-page__sidebar-left">
-      {renderNavBar()}
-    </aside>
-  );
+  return <aside className="home-page__sidebar-left">{renderNavBar()}</aside>;
 };
 
 export default NavBar;

@@ -269,7 +269,9 @@ body {
   content: fa-content($fa-var-stethoscope);
 }
 .icon-thumbs-up:before {
-  content: "\e90f";
+  @extend %fa-icon;
+  @extend .fas;
+  content: fa-content($fa-var-thumbs-up);
 }
 .icon-times:before {
   @extend %fa-icon;

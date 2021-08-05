@@ -45,14 +45,19 @@ const App = () => {
   };
 
   const renderFooter = () => {
-    if (isAuth | (location.pathname == "/sign-in")) {
+    if (
+      isAuth ||
+      location.pathname == "/sign-in" ||
+      path[1] == "lost-pets" ||
+      path[1] == "found-pets"
+    ) {
       return null;
     }
     return <Footer />;
   };
 
   return (
-    <div>
+    <div className="wrapper">
       <div>{renderHeader()}</div>
       <div>{renderMain()}</div>
       <div>{renderFooter()}</div>

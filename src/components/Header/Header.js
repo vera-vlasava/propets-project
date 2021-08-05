@@ -6,8 +6,6 @@ const Header = () => {
   let history = useHistory();
   let location = useLocation();
   const path = location.pathname.split("/");
-  console.log(path);
-
 
   const isAuth = useSelector((state) => state.users.isAuth);
 
