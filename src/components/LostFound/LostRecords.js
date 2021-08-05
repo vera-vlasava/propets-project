@@ -2,9 +2,11 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getLostRecords } from "../../store/actions/act_lostRecords";
 import LostRecordCard from "./LostRecordCard";
+import { useHistory } from "react-router";
 
 const LostRecords = () => {
   const dispatch = useDispatch();
+  let history = useHistory();
 
   useEffect(() => {
     dispatch(getLostRecords());
@@ -12,6 +14,11 @@ const LostRecords = () => {
 
   const allLostRecords = useSelector((state) => state.lostRecords.list);
   const isAuth = useSelector((state) => state.users.isAuth);
+
+  const clickHandle = (event) => {
+    event.preventDefault();
+    history.push("/sign-in");
+  };
 
   const renderLostRecords = () => {
     if (!allLostRecords.length) {
@@ -33,7 +40,11 @@ const LostRecords = () => {
     }
     return (
       <div className="home-page__info-link info-link">
-        Would you like to publish a post? <a href="#">join</a> to our community!
+        Would you like to publish a post?{" "}
+        <a href="" onClick={clickHandle}>
+          join
+        </a>{" "}
+        to our community!
       </div>
     );
   };

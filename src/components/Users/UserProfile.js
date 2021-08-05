@@ -64,7 +64,7 @@ const UserProfile = () => {
         <form onSubmit={submitHandle} className="my-profile__user-form">
           <div className="my-profile__user-date">
             <label for="">Email:</label>
-            <input type="text" placeholder={profile.email} readonly disabled />
+            <input type="text" placeholder={profile.email} readOnly disabled />
           </div>
           <div className="my-profile__user-date">
             <label for="">Phone:</label>

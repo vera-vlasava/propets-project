@@ -38,7 +38,7 @@ const AddComment = ({ activePost }) => {
             return <span>No comments</span>;
         }
         return (
-            <div class="card-comments__subtitle">
+            <div className="card-comments__subtitle">
                 {comments.map((comment) => {
                     return (
                         <CommentCard key={comment.id} comment={comment} />
@@ -49,19 +49,19 @@ const AddComment = ({ activePost }) => {
         );
     };
     return (
-        <div class="posts__card-comments card-comments">
-            <h3 class="card-comments__title">Comments</h3>
-            <div class="card-comments__subtitle">
+        <div className="posts__card-comments card-comments">
+            <h3 className="card-comments__title">Comments</h3>
+            <div className="card-comments__subtitle">
                 {renderCommentsRecords()}
             </div>
 
-            <form class="card-comments__form"
+            <form className="card-comments__form"
                 onSubmit={submitHandle}>
-                <div class="card-comments__item">
+                <div className="card-comments__item">
                     <input type="text" name="text" placeholder="type your comment" onChange={changeFieldHandle} />
                 </div>
-                <div class="card-comments__item">
-                    <button class="icon-comments">add comments</button>
+                <div className="card-comments__item">
+                    <button className="icon-comments">add comments</button>
                 </div>
             </form>
         </div>

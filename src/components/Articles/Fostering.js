@@ -2,29 +2,29 @@ import React from "react";
 
 const Fostering = () => {
   return (
-    <div class="home-page__container fostering">
-      <h2 class="home-page__title">Fostering. In adoption we trust.</h2>
-      <div class="home-page__row fostering__content">
-        <article class="fostering__item services-cards">
-          <div class="services-cards__img">
+    <div className="home-page__container fostering">
+      <h2 className="home-page__title">Fostering. In adoption we trust.</h2>
+      <div className="home-page__row fostering__content">
+        <article className="fostering__item services-cards">
+          <div className="services-cards__img">
             <img
               src="\assets\images\fostering1.png"
               alt="Walking"
             />
           </div>
-          <div class="services-cards__pet-avatar pet-avatar first-item">
-            <div class="pet-avatar__img">
+          <div className="services-cards__pet-avatar pet-avatar first-item">
+            <div className="pet-avatar__img">
               <img
                 src="\assets\images\puppy-avatar.png"
                 alt="Pet avatar"
               />
             </div>
-            <div class="pet-avatar__name">John Goodboy</div>
-            <div class="pet-avatar__date">6 April, 10:15</div>
+            <div className="pet-avatar__name">John Goodboy</div>
+            <div className="pet-avatar__date">6 April, 10:15</div>
           </div>
-          <div class="services-cards__info">
-            <div class="services-cards__text">
-              <h3 class="services-cards__title">
+          <div className="services-cards__info">
+            <div className="services-cards__text">
+              <h3 className="services-cards__title">
                 The quick, brown fox jumps over a lazy dog.
               </h3>
               <p>
@@ -49,20 +49,20 @@ const Fostering = () => {
               <address>
                 <span>Contacts:</span> Oliver Platz, 14193 Berlin |{" "}
                 <a
-                  class="services-cards__link dark"
+                  className="services-cards__link dark"
                   href="mailto:dogwalks@mail.com"
                 >
                   dogwalks@mail.com
                 </a>{" "}
                 |
-                <a class="services-cards__link dark" href="tel:+3531 264563890">
+                <a className="services-cards__link dark" href="tel:+3531 264563890">
                   3531 264563890
                 </a>
               </address>
-              <div class="card-details">
+              <div className="card-details">
                 <a
                   href="#"
-                  class="card-details__link services-cards__details icon-chevron-double"
+                  className="card-details__link services-cards__details icon-chevron-double"
                   data-open="Close"
                   data-close="...view details"
                   title="details"
@@ -71,26 +71,26 @@ const Fostering = () => {
             </div>
           </div>
         </article>
-        <article class="fostering__item services-cards">
-          <div class="services-cards__img">
+        <article className="fostering__item services-cards">
+          <div className="services-cards__img">
             <img
               src="\assets\images\fostering2.png"
               alt="Walking"
             />
           </div>
-          <div class="services-cards__pet-avatar pet-avatar first-item">
-            <div class="pet-avatar__img">
+          <div className="services-cards__pet-avatar pet-avatar first-item">
+            <div className="pet-avatar__img">
               <img
                 src="\assets\images\puppy-avatar.png"
                 alt="Pet avatar"
               />
             </div>
-            <div class="pet-avatar__name">Janetta</div>
-            <div class="pet-avatar__date">6 April, 10:15</div>
+            <div className="pet-avatar__name">Janetta</div>
+            <div className="pet-avatar__date">6 April, 10:15</div>
           </div>
-          <div class="services-cards__info">
-            <div class="services-cards__text">
-              <h3 class="services-cards__title">
+          <div className="services-cards__info">
+            <div className="services-cards__text">
+              <h3 className="services-cards__title">
                 The quick, brown fox jumps over a lazy dog.
               </h3>
               <p>
@@ -114,20 +114,20 @@ const Fostering = () => {
               <address>
                 <span>Contacts:</span> Oliver Platz, 14193 Berlin |{" "}
                 <a
-                  class="services-cards__link dark"
+                  className="services-cards__link dark"
                   href="mailto:dogwalks@mail.com"
                 >
                   dogwalks@mail.com
                 </a>{" "}
                 |
-                <a class="services-cards__link dark" href="tel:+3531 264563890">
+                <a className="services-cards__link dark" href="tel:+3531 264563890">
                   3531 264563890
                 </a>
               </address>
-              <div class="card-details">
+              <div className="card-details">
                 <a
                   href="#"
-                  class="card-details__link services-cards__details icon-chevron-double"
+                  className="card-details__link services-cards__details icon-chevron-double"
                   data-open="Close"
                   data-close="...view details"
                   title="details"
@@ -136,26 +136,26 @@ const Fostering = () => {
             </div>
           </div>
         </article>
-        <article class="fostering__item services-cards">
-          <div class="services-cards__img">
+        <article className="fostering__item services-cards">
+          <div className="services-cards__img">
             <img
               src="\assets\images\fostering3.png"
               alt="Walking"
             />
           </div>
-          <div class="services-cards__pet-avatar pet-avatar first-item">
-            <div class="pet-avatar__img">
+          <div className="services-cards__pet-avatar pet-avatar first-item">
+            <div className="pet-avatar__img">
               <img
                 src="\assets\images\puppy-avatar.png"
                 alt="Pet avatar"
               />
             </div>
-            <div class="pet-avatar__name">Uncle Sam</div>
-            <div class="pet-avatar__date">6 April, 10:15</div>
+            <div className="pet-avatar__name">Uncle Sam</div>
+            <div className="pet-avatar__date">6 April, 10:15</div>
           </div>
-          <div class="services-cards__info">
-            <div class="services-cards__text">
-              <h3 class="services-cards__title">
+          <div className="services-cards__info">
+            <div className="services-cards__text">
+              <h3 className="services-cards__title">
                 The quick, brown fox jumps over a lazy dog.
               </h3>
               <p>
@@ -180,20 +180,20 @@ const Fostering = () => {
               <address>
                 <span>Contacts:</span> Oliver Platz, 14193 Berlin |{" "}
                 <a
-                  class="services-cards__link dark"
+                  className="services-cards__link dark"
                   href="mailto:dogwalks@mail.com"
                 >
                   dogwalks@mail.com
                 </a>{" "}
                 |
-                <a class="services-cards__link dark" href="tel:+3531 264563890">
+                <a className="services-cards__link dark" href="tel:+3531 264563890">
                   3531 264563890
                 </a>
               </address>
-              <div class="card-details">
+              <div className="card-details">
                 <a
                   href="#"
-                  class="card-details__link services-cards__details icon-chevron-double"
+                  className="card-details__link services-cards__details icon-chevron-double"
                   data-open="Close"
                   data-close="...view details"
                   title="details"

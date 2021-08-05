@@ -1,9 +1,12 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
 import { getFoundRecords } from "../../store/actions/act_foundRecords";
 import FoundRecordCard from "./FoundRecordCard";
+
 const FoundRecords = () => {
   const dispatch = useDispatch();
+  let history = useHistory();
 
   useEffect(() => {
     dispatch(getFoundRecords());
@@ -11,6 +14,11 @@ const FoundRecords = () => {
 
   const allFoundRecords = useSelector((state) => state.foundRecords.list);
   const isAuth = useSelector((state) => state.users.isAuth);
+
+  const clickHandle = (event) => {
+    event.preventDefault();
+    history.push("/sign-in");
+  };
 
   const renderFoundRecords = () => {
     if (!allFoundRecords.length) {
@@ -32,7 +40,11 @@ const FoundRecords = () => {
     }
     return (
       <div className="home-page__info-link info-link">
-        Would you like to publish a post? <a href="#">join</a> to our community!
+        Would you like to publish a post?{" "}
+        <a onClick={clickHandle} href="">
+          join
+        </a>{" "}
+        to our community!
       </div>
     );
   };

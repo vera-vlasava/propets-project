@@ -2,15 +2,15 @@ import { FETCH_POSTS, ADD_POST, FETCH_POST_BY_ID, EDIT_POST } from "../typesList
 import { URL } from "../utilites";
 
 export const getPosts = () => {
-
   return async (dispatch) => {
     try {
       const response = await fetch(`${URL}/posts`, {
         method: "GET",
         mode: "cors",
         headers: {
-          "Content-Type": "application/json"
-        }
+
+          "Content-Type": "application/json",
+        },
       });
       const data = await response.json();
 
@@ -49,7 +49,8 @@ const fetchPosts = (obj) => {
 };
 
 export const getPostById = (postId) => {
-  return async dispatch => {
+
+  return async (dispatch) => {
     try {
       const response = await fetch(`${URL}/posts/${postId}`, {
         method: "GET",
@@ -60,6 +61,7 @@ export const getPostById = (postId) => {
       });
       if (response.status !== 200) {
         return
+
       }
       const data = await response.json();
       console.log("id");
@@ -68,14 +70,18 @@ export const getPostById = (postId) => {
     } catch (err) {
       console.log(err.message);
     }
+
   }
 }
+
 const fetchPostById = (post) => {
   return {
     type: FETCH_POST_BY_ID,
     payload: post,
-  }
-}
+
+  };
+};
+
 
 const addNewPostToState = (post) => {
   return {
@@ -83,6 +89,7 @@ const addNewPostToState = (post) => {
     payload: post,
   };
 };
+
 export const addLikeToPost = (id) => {
   return async (dispatch, getState) => {
     const post = getState().posts.list.find((post) => post.id === id);
@@ -113,3 +120,4 @@ export const addLikeToPost = (id) => {
 const changePostInState = (post) => {
   return { type: EDIT_POST, payload: post }
 }
+
