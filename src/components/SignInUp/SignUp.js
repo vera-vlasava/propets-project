@@ -26,36 +26,49 @@ const SignUp = ({ addUser }) => {
     return (
         <div className="container-singin">
             <form onSubmit={submitHandle}>
-                <div className="form-signInUp">
-                    <div className="label-signInUp">
+                <div className="form-signUp">
+                    <div className="label-signInUp text-right">
                         <label >Name:</label>
                     </div>
                     <div className="label-signInUp">
-                        <input type="text" placeholder='Helen Johnson' name='fullName' onChange={changeFieldHandle} />
+                        <input type="text" className="textarea-input" placeholder='Helen Johnson' name='fullName' onChange={changeFieldHandle} />
                     </div>
-                    <div className="label-signInUp">
+                    <div className="label-signInUp text-right">
+                        <br></br>
+                    </div>
+                    <div className="label-signInUp text-right">
                         <label >Email:</label>
                     </div>
                     <div className="label-signInUp">
                         <input type="text" className="textarea-input" name='email' placeholder='helenjohnson@gmail.com' onChange={changeFieldHandle} />
                     </div>
                     <div className="label-signInUp">
+                        <br></br>
+                    </div>
+                    <div className="label-signInUp text-right">
                         <label >Password:</label>{' '}
                     </div>
-                    <div>
+                    <div className="label-signInUp">
                         <input type="password" className="textarea-input" name='password' placeholder='**********' onChange={changeFieldHandle} />
                     </div>
-                    <div className="label-sing">
+                    <div className="label-signInUp">
+                        <p className="text-footnote">Password must have at least 8 characters with at least one Capital letter, at least one lower case letter and at least one number or special character.</p>
+                    </div>
+                    <div className="label-signInUp text-right">
                         <label >Password:</label>{' '}
                     </div>
-                    <div>
+                    <div className="label-signInUp">
                         <input type="password" className="textarea-input" name='password' placeholder='**********' onChange={changeFieldHandle} />
+                    </div>
+
+                    <div className="label-signInUp">
+                        <p className="text-footnote text-center">Please re-enter your password</p>
                     </div>
                 </div>
                 <hr />
-                <div>
+                <div className="butttext">
                     <p className="text-footnote">By clicking "Submit", you are agree to us processing your information in accordance with <span className="underlinedText">these terms.</span></p>
-                    <div>
+                    <div className="ssbutt">
                         <button className="btn btn-white button-right"> Cancel </button>
                         <button type="submit" className="btn btn-green button-right"> Submit </button>
                     </div>

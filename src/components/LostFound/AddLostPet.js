@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addNewLost } from "../../store/actions/act_lostRecords";
 import { useHistory } from "react-router";
-import NavBar from "../NavBar";
-import UserBar from "../UserBar";
+
 
 const AddLostPet = () => {
   let history = useHistory();
@@ -43,8 +42,6 @@ const AddLostPet = () => {
   };
 
   return (
-    <main className="page home-page">
-      <NavBar />
       <section className="home-page__content">
         <div className="home-page__container">
           <h2 className="home-page__title">
@@ -215,8 +212,6 @@ const AddLostPet = () => {
           </div>
         </div>
       </section>
-      <UserBar />
-    </main>
   );
 };
 

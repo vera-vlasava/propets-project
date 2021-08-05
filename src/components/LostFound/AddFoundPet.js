@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addNewFound } from "../../store/actions/act_foundRecords";
 import { useHistory } from "react-router";
-import NavBar from "../NavBar";
-import UserBar from "../UserBar";
+
 
 const AddFoundPet = () => {
   let history = useHistory();
@@ -43,8 +42,6 @@ const AddFoundPet = () => {
   };
 
   return (
-    <main className="page home-page">
-      <NavBar />
       <section className="home-page__content">
         <div className="home-page__container">
           <h2 className="home-page__title">
@@ -215,8 +212,6 @@ const AddFoundPet = () => {
           </div>
         </div>
       </section>
-      <UserBar />
-    </main>
   );
 };
 
