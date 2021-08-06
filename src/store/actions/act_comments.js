@@ -20,7 +20,6 @@ export const addComment = (comment) => {
             }
             const data = await response.json();
             await dispatch(addCommentInState(data));
-            console.log(data)
         } catch (err) {
             console.log(err.message);
         }

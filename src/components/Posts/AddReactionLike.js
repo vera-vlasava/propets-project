@@ -3,13 +3,6 @@ import { connect, useSelector } from "react-redux";
 import { addLikeToPost } from "../../store/actions/act_posts";
 
 const AddReactionLike = ({ post, addLike }) => {
-  const posts = useSelector((state) => {
-    return state.posts.list;
-  });
-  useEffect(() => {
-    console.log(posts);
-  }, [posts]);
-
   const addNewLike = (event) => {
     event.preventDefault();
     addLike(post.id);

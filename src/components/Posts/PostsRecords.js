@@ -17,18 +17,16 @@ const PostsRecords = () => {
       return <h1>No posts</h1>;
     }
     return (
-      <article className="posts__cards posts services-cards">
+      <div class="home-page__row">
         {allPostsRecords.map((post) => {
           return <PostRecordCard key={post.id} post={post} />;
         })}
-      </article>
+      </div>
     );
   };
   return (
     <div className="home-page__container home-content">
-      <div className="home-page__row">
-        <div>{renderPostsRecords()}</div>
-      </div>
+      <div>{renderPostsRecords()}</div>
     </div>
   );
 };

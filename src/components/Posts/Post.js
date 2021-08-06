@@ -18,15 +18,6 @@ const Post = () => {
     return state.posts.postById;
   });
 
-  const posts = useSelector((state) => {
-    return state.posts;
-  });
-  useEffect(() => {
-    console.log("useEffect1");
-    console.log(posts);
-    //dispatch(getPostById(+id))
-  }, [posts]);
-
   return post.User ? (
     <div className="home-page__container home-content">
       <div className="home-page__row">

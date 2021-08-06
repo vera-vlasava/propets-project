@@ -5,6 +5,12 @@
 
   &__cards {
     padding-bottom: 10px;
+    
+  }
+
+  .bottom {
+    padding-bottom: 10px; 
+    border-bottom: 1px solid #707070;
   }
 
   .pet-avatar {
@@ -53,6 +59,8 @@
     padding: 0 14px;
     text-align: end;
     cursor: pointer;
+    // padding: 10px; 
+    // border-bottom: 1px solid #707070;
 
     span {
       display: inline-block;
@@ -77,18 +85,6 @@
           }
         }
       }
-    }
-  }
-}
-
-.posts {
-  &._show-more {
-    .card-comments {
-      display: block;
-    }
-
-    .posts__card-details-like {
-      margin-bottom: 15px;
     }
   }
 }

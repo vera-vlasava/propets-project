@@ -9,8 +9,9 @@ const PostRecordCard = ({ post }) => {
     history.push(`/posts/${post.id}`);
   };
 
+  const date = new Date(post.createdAt).toLocaleString();
   return (
-    <div>
+    <article className="posts__cards posts services-cards bottom">
       <div className="pet-avatar">
         <div className="posts__avatar pet-avatar__img">
           <img src="/assets/images/puppy-avatar.png" alt="photo" />
@@ -18,7 +19,7 @@ const PostRecordCard = ({ post }) => {
         <div className="pet-avatar__name">
           {post.User ? `${post.User.fullName}` : "No Name"}
         </div>
-        <div className="pet-avatar__date">{post.createdAt}</div>
+        <div className="pet-avatar__date">{date}</div>
       </div>
       <div className="posts__card-img">
         <img src={post.photo} alt="" />
@@ -36,10 +37,10 @@ const PostRecordCard = ({ post }) => {
           ...more
         </a>
       </div>
-      <div className="posts__card-details-like">
+      <div className="posts__card-details-like bottom">
         <span className="icon-thumbs-up">Like {post.like}</span>
       </div>
-    </div>
+    </article>
   );
 };
 

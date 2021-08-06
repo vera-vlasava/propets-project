@@ -34,6 +34,7 @@
 		@include adaptiv-value("font-size", 56, 35, 1);
 		align-self: flex-end;
 		@include adaptiv-value("margin-bottom", 50, 20, 1);
+		color: #393939;
 		span {
 			color: $darkBlue;
 		}
@@ -200,6 +201,7 @@
 	}
 	&__info-link {
 		text-align: center;
+		color: #393939;
 		margin-right: 60px;
 		transform: translateX(-233px);
 		@include media-breakpoint-down(lg) {
