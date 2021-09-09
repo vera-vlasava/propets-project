@@ -1,0 +1,49 @@
+.header {
+	position: fixed;
+	width: 100%;
+	background-color: $darkBlue;
+	box-shadow: 0px 3px 6px $boxShadow;
+	margin-bottom: 9px;
+	z-index: 12;
+	@include media-breakpoint-down(md) {
+		margin-bottom: 30px;
+	}
+	&__buttons {
+		display: flex;
+	}
+}
+.header-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 70px;
+
+}
+
+.home-header {
+	background-color: $white;
+	margin-bottom: 0;
+	@include media-breakpoint-down(md) {
+		margin-bottom: 0;
+	}
+}
+
+.logo {
+	display: inline-flex;
+	align-items: center;
+	overflow: visible;
+	@include adaptiv-value("width", 143, 100, 1);
+	margin-bottom: -10px;
+	img {
+		display: block;
+		width: 100%;
+	}
+	position: relative;
+	overflow: visible;
+	.text-line {
+		stroke-dasharray: 500;
+		stroke-dashoffset: 500;
+		stroke-width: 1;
+	}
+}
+

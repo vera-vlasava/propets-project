@@ -1,0 +1,239 @@
+  
+.home-page {
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr minmax(250px, 750px) 1fr;
+	grid-template-rows: auto;
+	min-height: calc(100vh - 70px);
+	padding-top: 70px;
+	@include media-breakpoint-down(md) {
+		display: block;
+		padding-left: 55px;
+	}
+	// .home-page__sidebar-left
+
+	&__sidebar-left {
+		background-color: $darkBlue;
+		text-align: end;
+		padding: 30px 15px 0 0;
+		transition: transform 0.3s ease-in-out;
+		z-index: 10;
+		@include media-breakpoint-down(md) {
+			position: fixed;
+			top: 70px;
+			left: 0;
+			bottom: 0;
+			transform: translateX(-105px);
+			padding: 20px 5px 15px 0;
+			&._active {
+				transform: translateX(0);
+			}
+		}
+	}
+
+	// .home-page__sidebar-right
+
+	&__sidebar-right {
+		background-color: $darkBlue;
+		padding: 30px 15px 15px 15px;
+		transition: transform 0.3s ease-in-out;
+		z-index: 10;
+		@include media-breakpoint-down(md) {
+			transform: translateX(100%);
+			position: fixed;
+			top: 70px;
+			right: 0;
+			bottom: 0;
+			&._active {
+				transform: translateX(0);
+			}
+		}
+	}
+}
+
+.navigation {
+	&:not(:last-child) {
+		margin-bottom: 90px;
+	}
+
+	// .navigation__list
+
+	&__list {
+		list-style: none;
+		padding: 0;
+		transition: transform 0.3s ease-in-out;
+	}
+
+	// .navigation__li
+
+	&__li {
+		border-top-right-radius: 20px;
+		border-bottom-right-radius: 20px;
+		margin-bottom: 5px;
+		transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+		
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $white;
+				.navigation__link {
+					color: $darkBlue;
+				}
+			}
+		}
+		&._active {
+			background-color: $white;
+			.navigation__link {
+				color: $darkBlue;
+			}
+		}
+	}
+
+	// .navigation__link
+
+	&__link {
+		display: inline-flex;
+		align-items: center;
+		width: 130px;
+		color: $white;
+		text-decoration: none;
+		padding: 5px;
+		margin-left: 10px;
+		&:focus,
+		&:active,
+		&:visited {
+			color: $white;
+		}
+		&::before {
+			align-self: center;
+			margin-right: 13px;
+			width: 20px;
+			text-align: center;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $darkBlue;
+			}
+		}
+		@include media-breakpoint-down(md) {
+			flex-direction: row-reverse;
+			&::before {
+				margin-left: 25px;
+			}
+		}
+	}
+}
+
+.nav-services {
+	padding-left: 15px;
+	&__title-container {
+		display: inline-block;
+		width: 130px;
+		text-align: start;
+	}
+	&__title {
+		color: $white;
+		font-size: 18px;
+		font-weight: 600;
+		&::after {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 1px;
+			background-color: rgba($white, 0.5);
+			margin-top: 5px;
+		}
+	}
+
+	.navigation__li {
+		transition: 0.3s ease-in-out;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: transparent;
+				.navigation__link {
+					color: darken($darkBlue, 20%);
+				}
+			}
+		}
+		&._active {
+			background-color: transparent;
+			.navigation__link {
+				color: darken($darkBlue, 20%);
+			}
+		}
+
+		&:last-child a {
+			border-bottom: 1px solid rgba($white, 0.5);
+		}
+	}
+}
+
+.user-card {
+	// .user-card__info
+
+	&__info {
+		display: inline-grid;
+		grid-template: auto auto / 35px 105px;
+		column-gap: 10px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		border-top: 1px solid rgba($white, 0.5);
+		border-bottom: 1px solid rgba($white, 0.5);
+		margin-bottom: 6px;
+		width: 100%;
+		max-width: 140px;
+		min-width: 70px;
+		cursor: pointer;
+		transition: opacity .3s ease-in-out;
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: .6;
+			}
+		}
+		@include media-breakpoint-down(xl) {
+			grid-template: auto auto / 35px 1fr;
+		}
+	}
+
+	// .user-card__img
+
+	&__img {
+		grid-row: span 2;
+		text-align: center;
+		align-self: center;
+		border: 1px solid $white;
+		border-radius: 100%;
+		overflow: hidden;
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	// .user-card__lastname
+
+	&__name {
+		text-align: start;
+		font-size: 12px;
+		color: $white;
+	}
+
+	// .user-card__logout
+
+	&__logout {
+		display: block;
+		text-decoration: none;
+		font-size: 12px;
+		color: $white;
+		margin-left: 5%;
+		transition: color 0.3s ease-in-out;
+		&::before {
+			margin-right: 8px;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+				color: $white;
+			}
+		}
+	}
+}

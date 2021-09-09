@@ -1,0 +1,233 @@
+.cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card {
+  align-self: flex-end;
+  background-color: #fff;
+  width: 30%;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+
+  &__img {
+    // visibility: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 167px;
+    background-image: url("../images/5d87fd0f82452ab6787e72d1754d8900@2x.png");
+  }
+
+  &__info-hover {
+    font-size: 10px;
+    &::before {
+      color: #07cad4;
+      margin-right: 5px;
+    }
+    // padding-left:5px;
+    // position: absolute;
+    // padding: 16px 45px 16px 16px;
+    // opacity: 0;
+    // top: -35px;
+    // transition: all 0.2s ease-in-out;
+  }
+
+  &__info {
+    z-index: 2;
+    background-color: #fff;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding: 16px 14px 14px 14px;
+  }
+
+  &__category {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    position: absolute;
+    width: 100px;
+    top: 12px;
+    right: -25px;
+    padding: 3px 0;
+    text-align: center;
+    z-index: 10;
+    letter-spacing: 1px;
+    background-color: $red;
+    color: #fff;
+    mix-blend-mode: multiply;
+    transform: rotate(45deg);
+    transition: all 0.3s ease-in-out;
+    &.found-category {
+      background-color: #26bf4b;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: 700;
+    color: #707070;
+  }
+}
+
+.pet-type {
+  font-size: 22px;
+  color: #393939;
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: lighten($color: #393939, $amount: 30%);
+  }
+}
+
+.card-address {
+  color: lighten($color: #393939, $amount: 30%);
+  font-size: 14px;
+  font-weight: 500;
+  width: 100%;
+  &::before {
+    color: #07cad4;
+    margin-right: 5px;
+  }
+}
+
+.card-details {
+  font-size: 14px;
+  font-weight: 600;
+  // .card-details__link
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #07cad4;
+    transition: 0.3s ease-in-out;
+    &::before {
+      display: inline-block;
+      font-size: 10px;
+      margin-left: 5px;
+      transition: transform 0.3s ease-in-out;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        color: #226363;
+        // transform: translateX(10px);
+        // &::before {
+        //   transform: translateX(10px);
+        // }
+      }
+    }
+  }
+}
+
+.card-more {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  width: 100%;
+  padding: 20px 0;
+  @include media-breakpoint-down(sm) {
+    grid-template-columns: 1fr;
+  }
+
+  // .card-more__img
+  img {
+    height: 100%;
+    width: auto;
+  }
+
+  &__img {
+    padding-bottom: 5%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    // background-image: url("../images/found-pet.png");
+    background-size: cover;
+    border-top-left-radius: 12px;
+    @include media-breakpoint-down(sm) {
+      border-top-right-radius: 12px;
+    }
+  }
+
+  // .card-more__info
+
+  &__info {
+    div {
+      &:last-child {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  // .card-more__title
+
+  &__title {
+    font-size: 16px;
+    line-height: 18px;
+    color: #06b2bb;
+    margin-bottom: 5px;
+  }
+
+  // .card-more__date
+
+  &__date {
+    font-size: 12px;
+    line-height: 14px;
+    color: #bababa;
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: #bababa;
+      margin: 17px 0 29px;
+    }
+  }
+
+  // .card-more__item
+
+  &__item {
+    font-size: 12px;
+    span {
+      color: #06b2bb;
+    }
+  }
+
+  // .card-more__description
+
+  &__description {
+    grid-column: 1 / span 2;
+    margin-bottom: 20px;
+    @include media-breakpoint-down(sm) {
+      grid-column: 1;
+    }
+  }
+
+  // .card-more__contact
+
+  &__contact {
+    a {
+      text-decoration: none;
+      color: inherit;
+      font-size: 12px;
+      line-height: 14px;
+      margin-left: 3px;
+      transition: color 0.2s ease-in-out;
+      &:hover {
+        color: #049aa1;
+      }
+    }
+  }
+}

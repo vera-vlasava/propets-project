@@ -1,0 +1,271 @@
+  
+.home-page {
+	&__container {
+		max-width: 566px;
+		width: 100%;
+		margin: 0 auto;
+		padding: 30px 15px;
+		@media (max-width: 335px) {
+			padding: 30px 10px;
+		}
+	}
+
+	&__row {
+		position: relative;
+	}
+
+	// .home-page__title
+
+	&__title {
+		font-size: 16px;
+		font-weight: 700;
+		color: $darkBlue;
+		margin-bottom: 15px;
+		&::after {
+			content: "";
+			display: block;
+			height: 1px;
+			width: 100%;
+			background-color: #707070;
+			margin-top: 8px;
+		}
+	}
+
+	&__info-link {
+		font-size: 12px;
+		margin-bottom: 25px;
+	}
+}
+
+.services-cards {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+	column-gap: 15px;
+	// box-shadow: 0 8px 6px -4px rgb(0 0 0 / 10%);
+	// box-shadow: 0 0 10px 2px #d0d0d0;
+	// border-radius: 12px;
+	overflow:hidden;
+	&:not(:last-child) {
+		margin-bottom: 30px;
+	}
+	@include media-breakpoint-down(sm) {
+		grid-template-columns: 1fr;
+		.first-item {
+			order: -1;
+		}
+		.services-cards__img {
+			margin-bottom: 20px;
+			
+			img {
+				object-fit: cover;
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+	// .services-cards__img
+
+	&__img {
+		grid-row: span 2;
+		img {
+			object-fit: cover;
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	// .services-cards__info
+
+	&__info {
+		padding: 0 15px 0 15px;
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 15px;
+		}
+	}
+
+	// .services-cards__text
+
+	&__text {
+		p {
+			font-weight: 500;
+			font-size: 12px;
+			line-height: 22px;
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			margin-bottom: 5px;
+		}
+		address {
+			display: none;
+		}
+	}
+	&__title {
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 22px;
+		&.blue {
+			color: $darkBlue;
+		}
+	}
+
+	&__link {
+		display: inline-block;
+		font-size: 12px;
+		text-decoration: none;
+		color: lighten($darkBlue, 5%);
+		transition: text-decoration 0.3s ease-in-out;
+		&.dark {
+			color: $textcolor;
+		}
+	}
+	&._show-more {
+		grid-template-columns: 1fr;
+		background: #fff;
+		border-bottom: none;
+		height: 100%;
+		overflow-x: hidden;		
+		.services-cards__text {
+			p {
+				display: block;
+				-webkit-line-clamp: 6;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+				margin-bottom: 24px;
+			}
+			address {
+				display: block;
+				font-size: 12px;
+				span {
+					color: $darkBlue;
+					font-weight: 700;
+				}
+			}
+		}
+		.first-item {
+			order: -1;
+		}
+		.services-cards__img {
+			margin-bottom: 20px;
+			img {
+				object-fit: cover;
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+	&__details {
+		@extend .services-cards__link;
+		&::after {
+			content: attr(data-close);
+		}
+	}
+	&._show-more &__details {
+		&::after {
+			content: attr(data-open);
+		}
+	}
+}
+.pet-avatar {
+	display: inline-grid;
+	grid-template: auto auto / 43px 100%;
+	column-gap: 10px;
+	padding: 0 10px 10px 10px;
+	&:not(:last-child) {
+		margin-bottom:0;
+	}
+	// .pet-avatar__img
+
+	&__img {
+		grid-row: span 2;
+		text-align: center;
+		align-self: center;
+		border: 1px solid $white;
+		border-radius: 100%;
+		overflow: hidden;
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	// .pet-avatar__name
+
+	&__name {
+		color: lighten($darkBlue, 5%);
+		font-weight: 600;
+		line-height: 18px;
+		align-self: end;
+	}
+
+	// .pet-avatar__date
+
+	&__date {
+		font-size: 12px;
+		line-height: 14px;
+		color: #bababa;
+		align-self: start;
+	}
+}
+
+.contact-block {
+	&:not(:last-child) {
+		margin-bottom: 15px;
+	}
+	// .contact-block__title
+
+	&__title {
+		display: block;
+		font-size: 12px;
+		font-weight: 700;
+		line-height: 16px;
+	}
+
+	// .contact-block__info
+
+	&__info {
+		font-size: 12px;
+		line-height: 18px;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		margin-bottom: 5px;
+		span {
+			display: block;
+		}
+		&.web {
+			font-weight: 700;
+			margin-top: 20px;
+			color: $darkBlue;
+			display: none;
+		}
+	}
+	&__link {
+		@extend .services-cards__link;
+		&.dark {
+			color: $textcolor;
+		}
+	}
+}
+.services-cards._show-more {
+	.contact-block {
+		&__info {
+			display: block;
+			span {
+				display: block;
+			}
+			&.web {
+				font-weight: 700;
+				margin-top: 20px;
+				color: $darkBlue;
+				display: block;
+			}
+		}
+	}
+}

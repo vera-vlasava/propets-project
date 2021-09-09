@@ -1,0 +1,90 @@
+::-webkit-input-placeholder {
+	opacity: 1;
+	transition: opacity 0.3s ease;
+	color: #b6b6b6;
+}
+::-moz-placeholder {
+	opacity: 1;
+	transition: opacity 0.3s ease;
+	color: #b6b6b6;
+}
+:-moz-placeholder {
+	opacity: 1;
+	transition: opacity 0.3s ease;
+	color: #b6b6b6;
+}
+:-ms-input-placeholder {
+	opacity: 1;
+	transition: opacity 0.3s ease;
+	color: #b6b6b6;
+}
+::placeholder {
+	opacity: 1;
+	transition: opacity 0.3s ease;
+	color: #b6b6b6;
+}
+:focus::-webkit-input-placeholder {
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+:focus::-moz-placeholder {
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+:focus:-moz-placeholder {
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+:focus:-ms-input-placeholder {
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+label {
+	font-family: "Montserrat", sans-serif;
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 14px;
+	color: #393939;
+}
+
+textarea {
+	font-family: "Montserrat", sans-serif;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 14px;
+	width: 100%;
+	color: #444444;
+	padding: 5px;
+	border: 1px solid #1cb1ba;
+	resize: none;
+	&:active {
+		color: #2980b9;
+	}
+	&:focus {
+		color: #393939;
+	}
+}
+
+input {
+	font-family: "Montserrat", sans-serif;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 14px;
+	color: #444444;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom: 1px solid lighten(#06b2bb, 10%);
+	outline: none;
+	overflow: hidden;
+	-moz-appearance: none;
+	background: transparent;
+	padding: 3px;
+	&:active {
+		color: #2980b9;
+	}
+	&:focus {
+		color: #444444;
+	}
+}
